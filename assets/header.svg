@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="Talha Mubeen, Lead Technical Architect, ex-OpenAI">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E1224"/>
+      <stop offset="1" stop-color="#161B36"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.82" cy="0.1" r="0.7">
+      <stop offset="0" stop-color="#7CC4FF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#7CC4FF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#FFFFFF" stroke-opacity="0.045"/>
+    </pattern>
+    <style>
+      .t { font-family: "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif; }
+      .name { font-weight: 800; font-size: 76px; letter-spacing: -2.5px; fill: #F4F5FB; }
+      .role { font-weight: 600; font-size: 26px; fill: #AAB3D6; }
+      .tag  { font-weight: 700; font-size: 17px; }
+      .node { animation: pulse 3.2s ease-in-out infinite; }
+      .n2 { animation-delay: .8s; } .n3 { animation-delay: 1.6s; } .n4 { animation-delay: 2.4s; }
+      .flow { stroke-dasharray: 6 10; animation: dash 2.4s linear infinite; }
+      @keyframes pulse { 0%,100% { opacity: .35; } 50% { opacity: 1; } }
+      @keyframes dash { to { stroke-dashoffset: -32; } }
+    </style>
+  </defs>
+  <rect width="1200" height="320" rx="22" fill="url(#bg)"/>
+  <rect width="1200" height="320" rx="22" fill="url(#grid)"/>
+  <rect width="1200" height="320" rx="22" fill="url(#glow)"/>
+
+  <!-- a small service graph: the thing he designs -->
+  <g transform="translate(820 70)" fill="none" stroke-width="2">
+    <path class="flow" d="M40 40 L170 20 M40 40 L120 130 M170 20 L300 70 M120 130 L300 70 M120 130 L230 190 M300 70 L230 190" stroke="#7CC4FF" stroke-opacity=".55"/>
+    <circle class="node" cx="40" cy="40" r="11" fill="#C4A7FF"/>
+    <circle class="node n2" cx="170" cy="20" r="9" fill="#7CC4FF"/>
+    <circle class="node n3" cx="120" cy="130" r="13" fill="#63D9A8"/>
+    <circle class="node n4" cx="300" cy="70" r="10" fill="#F5C451"/>
+    <circle class="node n2" cx="230" cy="190" r="8" fill="#FF8F7A"/>
+  </g>
+
+  <text class="t name" x="64" y="140">Talha Mubeen</text>
+  <text class="t role" x="66" y="186">Lead Technical Architect  ·  ex-OpenAI</text>
+
+  <g class="t tag" transform="translate(66 226)">
+    <rect width="186" height="38" rx="19" fill="#C4A7FF" fill-opacity=".16"/><text x="18" y="25" fill="#C4A7FF">Agentic AI systems</text>
+    <rect x="198" width="184" height="38" rx="19" fill="#7CC4FF" fill-opacity=".16"/><text x="216" y="25" fill="#7CC4FF">Multi-tenant SaaS</text>
+    <rect x="394" width="178" height="38" rx="19" fill="#63D9A8" fill-opacity=".16"/><text x="412" y="25" fill="#63D9A8">IoT and real-time</text>
+  </g>
+</svg>
