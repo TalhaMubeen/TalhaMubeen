@@ -6,7 +6,8 @@
 
 <p align="center">
   <a href="https://linkedin.com/in/talhamubeen"><img src="https://img.shields.io/badge/LinkedIn-Talha%20Mubeen-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-  <a href="https://talhamubeen.github.io/dev-manager/"><img src="https://img.shields.io/badge/Just%20shipped-Dev%20Manager-63D9A8?style=for-the-badge&labelColor=0B0F1F" alt="Dev Manager"></a>
+  <a href="https://talhamubeen.com"><img src="https://img.shields.io/badge/Website-talhamubeen.com-F4F5FB?style=for-the-badge&labelColor=0B0F1F" alt="talhamubeen.com"></a>
+  <a href="https://talhamubeen.com/dev-manager/"><img src="https://img.shields.io/badge/Just%20shipped-Dev%20Manager-63D9A8?style=for-the-badge&labelColor=0B0F1F" alt="Dev Manager"></a>
   <img src="https://img.shields.io/badge/ex-OpenAI-C4A7FF?style=for-the-badge&labelColor=0B0F1F" alt="ex-OpenAI">
   <img src="https://komarev.com/ghpvc/?username=TalhaMubeen&style=for-the-badge&color=7CC4FF&label=VISITORS" alt="Profile visitors">
 </p>
@@ -33,7 +34,7 @@ I'm the Lead Technical Architect of **Panovia** at Attimo, an AI-native platform
 
 <table>
 <tr>
-<td width="50%"><a href="https://talhamubeen.github.io/dev-manager/"><img src="assets/card-devmanager.svg" alt="Dev Manager" width="100%"></a></td>
+<td width="50%"><a href="https://talhamubeen.com/dev-manager/"><img src="assets/card-devmanager.svg" alt="Dev Manager" width="100%"></a></td>
 <td width="50%"><a href="https://github.com/TalhaMubeen/ai-context-compressor"><img src="assets/card-compress.svg" alt="faithful-compress" width="100%"></a></td>
 </tr>
 <tr>
