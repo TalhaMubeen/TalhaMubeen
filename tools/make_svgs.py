@@ -47,9 +47,9 @@ def write(name, s):
 # ------------------------------------------------------------------ header
 def header():
     W, H = 1200, 400
-    nodes = [(760, 92, PURPLE, 13, "gateway"), (880, 58, BLUE, 9, "identity"), (1000, 96, GREEN, 11, "AI"), (1110, 70, AMBER, 8, "WBS"),
-             (820, 196, TEAL, 10, "tenancy"), (950, 214, PINK, 12, "scheduling"), (1080, 190, CORAL, 9, "documents"),
-             (880, 316, BLUE, 8, "reporting"), (1010, 322, PURPLE, 10, "conversations"), (1130, 300, GREEN, 8, "Archivia"), (770, 318, AMBER, 9, "core")]
+    nodes = [(760, 92, PURPLE, 13, "API gateway"), (880, 58, BLUE, 9, "auth"), (1000, 96, GREEN, 11, "agents"), (1110, 70, AMBER, 8, "evals"),
+             (820, 196, TEAL, 10, "tenancy"), (950, 214, PINK, 12, "event bus"), (1080, 190, CORAL, 9, "RAG"),
+             (880, 316, BLUE, 8, "queues"), (1010, 322, PURPLE, 10, "edge IoT"), (1130, 300, GREEN, 8, "MQTT"), (770, 318, AMBER, 9, "Postgres")]
     edges = [(0, 1), (0, 2), (2, 3), (0, 4), (4, 5), (2, 5), (5, 6), (3, 6), (5, 8), (4, 7), (8, 9), (6, 9), (10, 4), (10, 7), (7, 8)]
     e = "".join(f'<path class="flow" d="M{nodes[a][0]} {nodes[a][1]} L{nodes[b][0]} {nodes[b][1]}" stroke="{BLUE}" stroke-opacity=".45" stroke-width="1.6" style="animation-delay:-{(i*0.37)%1.8:.2f}s"/>' for i, (a, b) in enumerate(edges))
     packets = ""
@@ -70,21 +70,20 @@ def header():
   <g class="up"><text x="64" y="80" class="mono" font-size="17" fill="{GREEN}">~/talha $ <tspan fill="{INK}">whoami</tspan><tspan class="blink" fill="{GREEN}">▍</tspan></text></g>
   <g class="up" style="animation-delay:.12s"><text x="60" y="168" font-size="84" font-weight="800" letter-spacing="-3" fill="url(#ink)">Talha Mubeen</text></g>
   <g class="up" style="animation-delay:.25s"><text x="64" y="218" font-size="27" font-weight="600" fill="{INK}">Lead Technical Architect <tspan fill="{MUTED}">at Attimo</tspan>  <tspan fill="{PURPLE}">/</tspan>  ex-OpenAI</text></g>
-  <g class="up" style="animation-delay:.38s"><text x="64" y="248" font-size="17" fill="{MUTED}">8+ years building systems where mistakes are expensive. Now: AI that earns trust before it acts.</text></g>
-  {ch}
-  <text x="64" y="356" font-size="13" fill="{MUTED}" class="mono">On the right: Panovia's 11 NestJS microservices, which I designed.</text>"""
+  <g class="up" style="animation-delay:.38s"><text x="64" y="248" font-size="17" fill="{MUTED}">8+ years building systems where mistakes are expensive, from rail-safety devices to AI platforms.</text></g>
+  {ch}"""
     write("header.svg", svg(W, H, body, label="Talha Mubeen, Lead Technical Architect at Attimo, ex-OpenAI"))
 
 # ------------------------------------------------------------------ impact tiles
 def impact():
-    tiles = [("11", "microservices", "I designed for Panovia", PURPLE),
-             ("~100", "event types", "behind its transactional outbox", BLUE),
-             ("~80", "enterprise sources", "its connector framework is sized for", GREEN),
-             ("κ ≥ 0.6", "human agreement", "before an AI judge is trusted", AMBER),
+    tiles = [("8+", "years in production", "rail safety, SaaS and AI platforms", PURPLE),
              ("99.6%", "detection accuracy", "OpenCV detector, harsh daylight", CORAL),
              ("10K+", "requests / minute", "on backends I led, sub-100 ms APIs", TEAL),
-             ("67", "merged pull requests", "on production platforms", PINK),
-             ("1", "patent in preparation", "for Panovia's AI engine", PURPLE)]
+             ("40%", "faster queries", "from reworked Mongoose schemas", BLUE),
+             ("100+", "API endpoints", "re-architected across 30+ tables", GREEN),
+             ("99.9%", "uptime", "across 5 IoT production deployments", AMBER),
+             ("7", "engineers led", "on a construction SaaS platform", PINK),
+             ("67", "merged pull requests", "on production platforms", PURPLE)]
     W, H, cols = 1200, 380, 4
     tw, th, gx, gy, x0, y0 = 272, 138, 16, 16, 24, 70
     body = frame(W, H) + f'<text x="28" y="44" font-size="22" font-weight="800" fill="{INK}">Impact, measured</text><text x="1172" y="44" text-anchor="end" font-size="14" fill="{MUTED}">from shipped work, not side quests</text>'
@@ -96,31 +95,28 @@ def impact():
     <text x="{x + 22}" y="{y + 58}" font-size="44" font-weight="800" letter-spacing="-1.5" fill="{c}">{big}</text>
     <text x="{x + 22}" y="{y + 88}" font-size="16" font-weight="700" fill="{INK}">{lab}</text>
     <text x="{x + 22}" y="{y + 112}" font-size="12.5" fill="{MUTED}">{sub}</text></g>"""
-    write("impact.svg", svg(W, H, body, label="Impact: 11 microservices, about 100 event types, about 80 enterprise sources, AI judges at kappa 0.6 or higher, 99.6% detection accuracy, 10K+ requests per minute, 67 merged pull requests, 1 patent in preparation"))
+    write("impact.svg", svg(W, H, body, label="Impact: 8+ years in production, 99.6% detection accuracy, 10K+ requests per minute, 40% faster queries, 100+ API endpoints re-architected, 99.9% uptime across 5 IoT deployments, 7 engineers led, 67 merged pull requests"))
 
-# ------------------------------------------------------------------ Panovia architecture
-def panovia():
-    W, H = 1200, 560
-    def box(x, y, w, h, t, sub, c, d=0):
-        return f'<g class="up" style="animation-delay:{d:.2f}s"><rect x="{x}" y="{y}" width="{w}" height="{h}" rx="14" fill="{c}" fill-opacity=".10" stroke="{c}" stroke-opacity=".55"/><text x="{x + w/2}" y="{y + h/2 - (4 if sub else -6)}" text-anchor="middle" font-size="16" font-weight="800" fill="{INK}">{t}</text>' + (f'<text x="{x + w/2}" y="{y + h/2 + 16}" text-anchor="middle" font-size="12" fill="{MUTED}">{sub}</text>' if sub else "") + "</g>"
-    b = frame(W, H)
-    b += f'<text x="28" y="46" font-size="22" font-weight="800" fill="{INK}">Panovia, the platform I architected</text><text x="28" y="72" font-size="14" fill="{MUTED}">AI-native project management and execution. Every AI action stays under human approval.</text>'
-    b += box(80, 104, 240, 58, "Next.js 16 web app", "React 19, TanStack Query", BLUE, 0)
-    b += box(480, 104, 240, 58, "Platform admin", "Cloudflare Access + Tunnel", BLUE, .05)
-    b += box(880, 104, 240, 58, "Enterprise sources", "M365, Google, WhatsApp, Notion", BLUE, .1)
-    b += box(380, 206, 440, 54, "Gateway", "", PURPLE, .15)
-    svcs = [("identity", PURPLE), ("tenancy", PURPLE), ("WBS", GREEN), ("scheduling", GREEN), ("AI", AMBER), ("documents", TEAL), ("conversations", TEAL), ("reporting", PINK), ("Archivia", PINK)]
-    sx = 52
-    for i, (n, c) in enumerate(svcs):
-        b += box(sx + i * 122, 304, 110, 48, n, "", c, .2 + i * .04)
-    b += box(52, 372, 1096, 40, "shared core library", "", MUTED, .6)
-    b += box(52, 440, 340, 72, "PostgreSQL, row-level tenancy", "Drizzle ORM, Aurora Serverless v2", GREEN, .7)
-    b += box(430, 440, 340, 72, "Transactional outbox", "~100 catalogued event types", PURPLE, .75)
-    b += box(808, 440, 340, 72, "AI layer", "Claude + Voyage, router, κ-gated judges", AMBER, .8)
-    flows = [(200, 162, 520, 206), (600, 162, 600, 206), (1000, 162, 700, 206)] + [(600, 260, 107 + i * 122, 304) for i in range(9)] + [(222, 412, 222, 440), (600, 412, 600, 440), (978, 412, 978, 440)]
-    b += "".join(f'<path class="flow" style="animation-delay:-{(i*0.3)%1.8:.1f}s" d="M{a} {c} L{d} {e}" stroke="{BLUE}" stroke-opacity=".5" stroke-width="1.5" fill="none"/>' for i, (a, c, d, e) in enumerate(flows))
-    b += f'<text x="1172" y="540" text-anchor="end" font-size="12" fill="{MUTED}">AWS ECS Fargate · Valkey · S3 · BullMQ · SCIM · KVKK / GDPR</text>'
-    write("panovia.svg", svg(W, H, b, label="Panovia architecture: web app, admin and enterprise sources into a gateway, nine domain services and a shared core library, over PostgreSQL, a transactional outbox and an AI layer"))
+# ------------------------------------------------------------------ how I build
+def principles():
+    W, H = 1200, 400
+    items = [("Spec before code", "Requirements become specs with acceptance", "criteria before anything gets built.", PURPLE),
+             ("Blast radius first", "Every change gets a risk and blast-radius", "review before it ships.", CORAL),
+             ("Gates, not vibes", "Objective quality gates and a promotion", "policy between environments.", BLUE),
+             ("AI earns its place", "LLM output is measured against human", "judgement and kept under human approval.", AMBER),
+             ("Boundaries by domain", "Domain-driven, event-driven services", "with tenant isolation by default.", GREEN),
+             ("Teams that ship", "Roadmaps that turn business goals into", "delivery, and engineers I mentor.", TEAL)]
+    b = frame(W, H) + f'<text x="28" y="46" font-size="22" font-weight="800" fill="{INK}">How I build</text><text x="1172" y="46" text-anchor="end" font-size="14" fill="{MUTED}">the rules I bring to every team</text>'
+    tw, th = 368, 140
+    for i, (t, l1, l2, c) in enumerate(items):
+        x = 24 + (i % 3) * (tw + 16); y = 76 + (i // 3) * (th + 16)
+        b += f"""<g class="up" style="animation-delay:{0.08*i:.2f}s">
+    <rect x="{x}" y="{y}" width="{tw}" height="{th}" rx="18" fill="#FFFFFF" fill-opacity=".03" stroke="{c}" stroke-opacity=".28"/>
+    <circle cx="{x + 32}" cy="{y + 38}" r="8" fill="{c}"/><circle cx="{x + 32}" cy="{y + 38}" r="16" fill="{c}" opacity=".18"/>
+    <text x="{x + 58}" y="{y + 45}" font-size="20" font-weight="800" fill="{INK}">{t}</text>
+    <text x="{x + 24}" y="{y + 86}" font-size="14.5" fill="{MUTED}">{l1}</text>
+    <text x="{x + 24}" y="{y + 108}" font-size="14.5" fill="{MUTED}">{l2}</text></g>"""
+    write("principles.svg", svg(W, H, b, label="How I build: spec before code, blast radius first, gates not vibes, AI earns its place, boundaries by domain, teams that ship"))
 
 # ------------------------------------------------------------------ career timeline
 def timeline():
@@ -132,7 +128,7 @@ def timeline():
             ("TPG, Inc.", "Senior Backend Developer", 2021.95, 2022.95, BLUE, 2),
             ("WNK Associates", "Senior Backend Engineer, team lead", 2022.95, 2025.55, TEAL, 0),
             ("MID-Construction", "Senior Solution Architect", 2025.45, 2026.45, PINK, 1),
-            ("Attimo · Panovia", "Lead Technical Architect", 2026.0, 2026.88, PURPLE, 2)]
+            ("Attimo", "Lead Technical Architect", 2026.0, 2026.88, PURPLE, 2)]
     b = frame(W, H) + f'<text x="28" y="46" font-size="22" font-weight="800" fill="{INK}">Where I\'ve built</text>'
     for yr in range(2018, 2027):
         x = X(yr)
@@ -189,11 +185,11 @@ def stack():
 
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
-    header(); impact(); panovia(); timeline(); stack()
-    card("devmanager", "Dev Manager", "The task manager for developers: every Claude Code session, MCP server and dev server on Windows, what each one costs, and what is reaching the network. Runs locally.", ["Electron", "Node.js", "PowerShell"], GREEN, "NEW · v1.0")
+    header(); impact(); principles(); timeline(); stack()
     card("compress", "faithful-compress", "Context compression for LLMs that keeps exact anchors verbatim by construction and only compresses background. Property-tested invariants.", ["Haskell", "LLM context", "Property tests"], PURPLE)
     card("ingestion", "Document Ingestion Platform", "Upload PDFs and text, extract metadata and full text in a Python worker, and search it through a Fastify API on PostgreSQL full-text search.", ["TypeScript", "Fastify", "Python", "PostgreSQL"], BLUE)
     card("iam", "IAM System", "Identity and access management with role-based access control, groups, modules and permissions, JWT auth and a React admin.", ["Node.js", "Express", "React", "RBAC"], AMBER)
     card("hue", "Hue bridge for ESP32", "A XIAO ESP32-C3 that appears as a light in the Philips Hue app and drives WS2812 LEDs with patterns and a physical button.", ["C++", "ESP32", "IoT"], CORAL)
     card("glm", "Gatearm Light Monitor", "Monitors railway crossing gate lights on Raspberry Pi and Windows. The OpenCV detector behind it hit 99.6% accuracy in harsh daylight.", ["Python", "OpenCV", "Raspberry Pi"], TEAL, "99.6%")
+    card("rms", "RMS Android", "An Android app that monitors and talks to IoT sensors over Bluetooth Low Energy, collecting temperature and humidity data.", ["Java", "Android", "BLE"], GREEN)
     print("ok")

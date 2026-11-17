@@ -1,44 +1,31 @@
 <a href="https://linkedin.com/in/talhamubeen"><img src="assets/header.svg" alt="Talha Mubeen, Lead Technical Architect at Attimo, ex-OpenAI" width="100%"></a>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=21&duration=2600&pause=1000&color=7CC4FF&center=true&vCenter=true&width=820&lines=I+design+AI-native+platforms+people+can+trust;11+microservices%2C+one+multi-tenant+SaaS%2C+humans+approve+the+AI;LLM+judges+only+ship+after+they+agree+with+humans+(%CE%BA+%E2%89%A5+0.6);From+rail-safety+firmware+to+agent+runtimes" alt="I design AI-native platforms people can trust">
+  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=21&duration=2600&pause=1000&color=7CC4FF&center=true&vCenter=true&width=820&lines=I+design+AI-native+platforms+people+can+trust;Agentic+AI%2C+LLM+evals%2C+multi-tenant+SaaS;From+rail-safety+firmware+to+agent+runtimes" alt="I design AI-native platforms people can trust">
 </p>
 
 <p align="center">
   <a href="https://linkedin.com/in/talhamubeen"><img src="https://img.shields.io/badge/LinkedIn-Talha%20Mubeen-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
   <a href="https://talhamubeen.com"><img src="https://img.shields.io/badge/Website-talhamubeen.com-F4F5FB?style=for-the-badge&labelColor=0B0F1F" alt="talhamubeen.com"></a>
-  <a href="https://talhamubeen.com/dev-manager/"><img src="https://img.shields.io/badge/Just%20shipped-Dev%20Manager-63D9A8?style=for-the-badge&labelColor=0B0F1F" alt="Dev Manager"></a>
   <img src="https://img.shields.io/badge/ex-OpenAI-C4A7FF?style=for-the-badge&labelColor=0B0F1F" alt="ex-OpenAI">
   <img src="https://komarev.com/ghpvc/?username=TalhaMubeen&style=for-the-badge&color=7CC4FF&label=VISITORS" alt="Profile visitors">
 </p>
 
-I'm the Lead Technical Architect of **Panovia** at Attimo, an AI-native platform for project management and execution. Before that I was a Fullstack AI Engineer (Python) at **OpenAI**, building tools for model training, inference and deployment. Earlier, I built rail-safety devices that warn track workers about approaching trains. I like problems where a wrong answer costs something.
+I'm a Lead Technical Architect at **Attimo**, where I design AI-native SaaS platforms: agentic systems, evals and human-in-the-loop control on top of multi-tenant, event-driven services. Before that I was a Fullstack AI Engineer (Python) at **OpenAI**, building tools for model training, inference and deployment. Earlier, I built rail-safety devices that warn track workers about approaching trains. I like problems where a wrong answer costs something.
 
-<img src="assets/impact.svg" alt="Impact: 11 microservices, about 100 event types, about 80 enterprise sources, AI judges at kappa 0.6 or higher, 99.6% detection accuracy, 10K+ requests per minute, 67 merged pull requests, 1 patent in preparation" width="100%">
+<img src="assets/impact.svg" alt="Impact: 8+ years in production, 99.6% detection accuracy, 10K+ requests per minute, 40% faster queries, 100+ API endpoints re-architected, 99.9% uptime across 5 IoT deployments, 7 engineers led, 67 merged pull requests" width="100%">
 
-<img src="assets/panovia.svg" alt="Panovia architecture: web app, admin and enterprise sources into a gateway, nine domain services and a shared core library, over PostgreSQL, a transactional outbox and an AI layer" width="100%">
-
-<details>
-<summary><b>How Panovia keeps AI honest</b></summary>
-<br>
-
-- **Judges earn trust.** An LLM judge is used only after it agrees with human reviewers at Cohen's κ ≥ 0.6, with release gates, monthly re-verification and shadow-replay tests.
-- **Four levels of human oversight:** automatic, confirm, approval, prohibited. Tenants can only tighten the gates, never loosen them.
-- **Every AI value is labelled by its source**, and every change is versioned and audited.
-- **A bounded agent runtime** (propose, critique, fill gaps) admits a learned skill only when it shows a measured gain.
-- **Zero-retention gate** for AI providers as part of the KVKK / GDPR programme.
-
-</details>
+<img src="assets/principles.svg" alt="How I build: spec before code, blast radius first, gates not vibes, AI earns its place, boundaries by domain, teams that ship" width="100%">
 
 ### Selected work
 
 <table>
 <tr>
-<td width="50%"><a href="https://talhamubeen.com/dev-manager/"><img src="assets/card-devmanager.svg" alt="Dev Manager" width="100%"></a></td>
 <td width="50%"><a href="https://github.com/TalhaMubeen/ai-context-compressor"><img src="assets/card-compress.svg" alt="faithful-compress" width="100%"></a></td>
+<td width="50%"><a href="https://github.com/TalhaMubeen/Document-Ingestion"><img src="assets/card-ingestion.svg" alt="Document Ingestion Platform" width="100%"></a></td>
 </tr>
 <tr>
-<td><a href="https://github.com/TalhaMubeen/Document-Ingestion"><img src="assets/card-ingestion.svg" alt="Document Ingestion Platform" width="100%"></a></td>
+<td><a href="https://github.com/TalhaMubeen/RMSAndroid"><img src="assets/card-rms.svg" alt="RMS Android" width="100%"></a></td>
 <td><a href="https://github.com/TalhaMubeen/Gatearm-Light-Monitoring"><img src="assets/card-glm.svg" alt="Gatearm Light Monitor" width="100%"></a></td>
 </tr>
 <tr>
