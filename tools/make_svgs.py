@@ -69,10 +69,10 @@ def header():
   <g>{e}{packets}{n}</g>
   <g class="up"><text x="64" y="80" class="mono" font-size="17" fill="{GREEN}">~/talha $ <tspan fill="{INK}">whoami</tspan><tspan class="blink" fill="{GREEN}">▍</tspan></text></g>
   <g class="up" style="animation-delay:.12s"><text x="60" y="168" font-size="84" font-weight="800" letter-spacing="-3" fill="url(#ink)">Talha Mubeen</text></g>
-  <g class="up" style="animation-delay:.25s"><text x="64" y="218" font-size="27" font-weight="600" fill="{INK}">Lead Technical Architect <tspan fill="{MUTED}">at Attimo</tspan>  <tspan fill="{PURPLE}">/</tspan>  ex-OpenAI</text></g>
+  <g class="up" style="animation-delay:.25s"><text x="64" y="218" font-size="27" font-weight="600" fill="{INK}">Lead Technical Architect  <tspan fill="{PURPLE}">/</tspan>  ex-OpenAI</text></g>
   <g class="up" style="animation-delay:.38s"><text x="64" y="248" font-size="17" fill="{MUTED}">8+ years building systems where mistakes are expensive, from rail-safety devices to AI platforms.</text></g>
   {ch}"""
-    write("header.svg", svg(W, H, body, label="Talha Mubeen, Lead Technical Architect at Attimo, ex-OpenAI"))
+    write("header.svg", svg(W, H, body, label="Talha Mubeen, Lead Technical Architect, ex-OpenAI"))
 
 # ------------------------------------------------------------------ impact tiles
 def impact():
@@ -128,7 +128,7 @@ def timeline():
             ("TPG, Inc.", "Senior Backend Developer", 2021.95, 2022.95, BLUE, 2),
             ("WNK Associates", "Senior Backend Engineer, team lead", 2022.95, 2025.55, TEAL, 0),
             ("MID-Construction", "Senior Solution Architect", 2025.45, 2026.45, PINK, 1),
-            ("Attimo", "Lead Technical Architect", 2026.0, 2026.88, PURPLE, 2)]
+            ("Lead Technical Architect", "AI-native SaaS", 2026.0, 2026.88, PURPLE, 2)]
     b = frame(W, H) + f'<text x="28" y="46" font-size="22" font-weight="800" fill="{INK}">Where I\'ve built</text>'
     for yr in range(2018, 2027):
         x = X(yr)
@@ -141,7 +141,7 @@ def timeline():
         b += f"""<g class="up" style="animation-delay:{0.1*i:.1f}s"><rect x="{x}" y="{y}" width="{w}" height="10" rx="5" fill="{c}"/>
   <text x="{tx}" y="{y + 32}" text-anchor="{anchor}" font-size="15" font-weight="800" fill="{INK}">{n} <tspan font-weight="500" fill="{MUTED}" font-size="13">{r}</tspan></text></g>"""
     b += f'<circle class="pulse" cx="{X(2026.88)}" cy="{88 + 2*60 + 5}" r="7" fill="{PURPLE}"/><text x="1172" y="316" text-anchor="end" font-size="12" fill="{MUTED}">BS Computer Science, FAST-NUCES, 2017</text>'
-    write("timeline.svg", svg(W, H, b, label="Career: Powersoft19 2018 to 2021, OpenAI 2021 to 2022, TPG 2021 to 2022, WNK Associates 2022 to 2025, MID-Construction 2025 to 2026, Attimo since 2026"))
+    write("timeline.svg", svg(W, H, b, label="Career: Powersoft19 2018 to 2021, OpenAI 2021 to 2022, TPG 2021 to 2022, WNK Associates 2022 to 2025, MID-Construction 2025 to 2026, Lead Technical Architect since 2026"))
 
 # ------------------------------------------------------------------ project cards
 def card(name, title, desc, tags, c, stat=""):

@@ -1,4 +1,4 @@
-<a href="https://linkedin.com/in/talhamubeen"><img src="assets/header.svg" alt="Talha Mubeen, Lead Technical Architect at Attimo, ex-OpenAI" width="100%"></a>
+<a href="https://linkedin.com/in/talhamubeen"><img src="assets/header.svg" alt="Talha Mubeen, Lead Technical Architect, ex-OpenAI" width="100%"></a>
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=21&duration=2600&pause=1000&color=7CC4FF&center=true&vCenter=true&width=820&lines=I+design+AI-native+platforms+people+can+trust;Agentic+AI%2C+LLM+evals%2C+multi-tenant+SaaS;From+rail-safety+firmware+to+agent+runtimes" alt="I design AI-native platforms people can trust">
@@ -11,7 +11,7 @@
   <img src="https://komarev.com/ghpvc/?username=TalhaMubeen&style=for-the-badge&color=7CC4FF&label=VISITORS" alt="Profile visitors">
 </p>
 
-I'm a Lead Technical Architect at **Attimo**, where I design AI-native SaaS platforms: agentic systems, evals and human-in-the-loop control on top of multi-tenant, event-driven services. Before that I was a Fullstack AI Engineer (Python) at **OpenAI**, building tools for model training, inference and deployment. Earlier, I built rail-safety devices that warn track workers about approaching trains. I like problems where a wrong answer costs something.
+I'm a Lead Technical Architect designing AI-native SaaS platforms: agentic systems, evals and human-in-the-loop control on top of multi-tenant, event-driven services. Before that I was a Fullstack AI Engineer (Python) at **OpenAI**, building tools for model training, inference and deployment. Earlier, I built rail-safety devices that warn track workers about approaching trains. I like problems where a wrong answer costs something.
 
 <img src="assets/impact.svg" alt="Impact: 8+ years in production, 99.6% detection accuracy, 10K+ requests per minute, 40% faster queries, 100+ API endpoints re-architected, 99.9% uptime across 5 IoT deployments, 7 engineers led, 67 merged pull requests" width="100%">
 
@@ -34,7 +34,7 @@ I'm a Lead Technical Architect at **Attimo**, where I design AI-native SaaS plat
 </tr>
 </table>
 
-<img src="assets/timeline.svg" alt="Career: Powersoft19 2018 to 2021, OpenAI 2021 to 2022, TPG 2021 to 2022, WNK Associates 2022 to 2025, MID-Construction 2025 to 2026, Attimo since 2026" width="100%">
+<img src="assets/timeline.svg" alt="Career: Powersoft19 2018 to 2021, OpenAI 2021 to 2022, TPG 2021 to 2022, WNK Associates 2022 to 2025, MID-Construction 2025 to 2026, Lead Technical Architect since 2026" width="100%">
 
 <img src="assets/stack.svg" alt="Stack: AI and agents, platform languages, data and infrastructure, architecture" width="100%">
 
